@@ -1,0 +1,15 @@
+@import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --text-color: var(--ctp-latte-text);
+        --bg-color: var(--ctp-latte-base);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: var(--ctp-mocha-text);
+        --bg-color: var(--ctp-mocha-base);
+    }
+}
