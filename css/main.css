@@ -5,15 +5,17 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-h1 {
+div.root {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+h1, h2, h3 {
     font-family: var(--header-font);
-}
-
-.center {
-    margin: auto;
 }
 
 /* code block styling */
@@ -39,4 +41,8 @@ code a {
     color: var(--color-red);
     font-weight: bold;
     text-decoration: none;
+}
+
+code a.current {
+    text-decoration: var(--text-color) underline 2px;
 }

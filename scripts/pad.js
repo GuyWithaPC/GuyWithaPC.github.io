@@ -43,8 +43,14 @@ function calcPadding(element, size, character) {
  */
 function applyPadding(element, size, character) {
     let numChars = calcPadding(element, size, character);
-    element.prepend(character.repeat(Math.floor(numChars / 2)));
-    element.append(character.repeat(Math.ceil(numChars / 2)));
+    if (element.getAttribute("padSide") == "left") {
+        element.prepend(character.repeat(numChars));
+    } else if (element.getAttribute("padSide") == "right") {
+        element.append(character.repeat(numChars));
+    } else {
+        element.prepend(character.repeat(Math.floor(numChars / 2)));
+        element.append(character.repeat(Math.ceil(numChars / 2)));
+    }
 }
 
 let padAll = (event) => {
