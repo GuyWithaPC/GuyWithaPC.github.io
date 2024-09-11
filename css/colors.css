@@ -4,6 +4,12 @@
     :root {
         --text-color: var(--ctp-latte-text);
         --bg-color: var(--ctp-latte-base);
+        --bg-color-sec: var(--ctp-latte-mantle);
+        --bg-color-ter: var(--ctp-latte-crust);
+
+        --color-red: var(--ctp-latte-red);
+        --color-green: var(--ctp-latte-green);
+        --color-blue: var(--ctp-latte-blue);
     }
 }
 
@@ -11,5 +17,11 @@
     :root {
         --text-color: var(--ctp-mocha-text);
         --bg-color: var(--ctp-mocha-base);
+        --bg-color-sec: var(--ctp-mocha-mantle);
+        --bg-color-ter: var(--ctp-mocha-crust);
+        
+        --color-red: var(--ctp-mocha-red);
+        --color-green: var(--ctp-mocha-green);
+        --color-blue: var(--ctp-mocha-blue);
     }
 }
