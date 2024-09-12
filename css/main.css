@@ -1,0 +1,147 @@
+
+@import 'colors.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --font-text: "Inter", "Segoe UI", "Helvetica Neue", sans-serif;
+    --font-code: "Fira Code", monospace;
+}
+
+body {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 0 10px;
+    color: var(--color-body);
+    background: var(--color-bg);
+}
+
+/* generic stuff */
+
+.centertext {
+    text-align: center;
+}
+
+/* image containers */
+
+.imagecontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 650px) {
+    .imagecontainer {
+        flex-direction: column;
+    }
+
+    .imagecontainer img, .imagecontainer image {
+        align-self: center;
+        max-width: 75%;
+    }
+}
+
+.imagecontainer img, .imagecontainer image {
+    border-radius: 10pt;
+    flex: 1 1 0px;
+    min-width: 25%;
+    height: auto;
+    margin: 10pt;
+}
+
+/* heading stuff */
+
+h1, h2, h3 {
+    line-height: 1.2;
+    font-family: var(--font-text);
+    font-weight: 900;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: x-large;
+    color: var(--color-subhead);
+}
+
+h3 {
+    font-size: large;
+    color: var(--color-subtle);
+}
+
+/* plain text styles */
+
+p {
+    font-family: var(--font-text);
+    color: var(--color-text);
+}
+
+p.subtle {
+    color: var(--color-subtle);
+}
+
+/* hr styles */
+
+hr {
+    width: 100px;
+    border-color: var(--color-subtle);
+}
+
+@media (max-width: 650px) {
+    hr {
+        border-color: transparent;
+    }
+}
+
+/* link styles */
+a {
+    color: var(--color-blue);
+    font-family: var(--font-text);
+}
+
+/* navbar styles */
+
+#navbar {
+    display: flex;
+    position: sticky;
+    top: 10pt;
+    flex-direction: row;
+    background-color: var(--color-panel);
+    padding: 0;
+    border-radius: 30pt;
+    align-content: center;
+}
+
+#navbar a {
+    font-family: var(--font-text);
+    font-weight: 800;
+    background-color: transparent;
+    transition: background-color 0.25s;
+    padding: 10pt;
+    border-radius: inherit;
+    text-align: center;
+    flex-grow: 1;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+#navbar a:hover, #navbar a:focus {
+    background-color: var(--color-secpan);
+}
+
+#navbar a.current {
+    background-color: var(--color-overlay);
+}
+
+#navbar a.current:hover, #navbar a.current:focus {
+    background-color: var(--color-secover);
+}
+
+@media (max-width: 650px) {
+    #navbar {
+        flex-direction: column;
+        position: inherit;
+        margin-bottom: 10pt;
+    }
+}
