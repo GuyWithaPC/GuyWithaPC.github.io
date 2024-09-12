@@ -1,27 +1,46 @@
+
 @import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --text-color: var(--ctp-latte-text);
-        --bg-color: var(--ctp-latte-base);
-        --bg-color-sec: var(--ctp-latte-mantle);
-        --bg-color-ter: var(--ctp-latte-crust);
+:root {
+    /* background colors */
+    --color-bg: var(--ctp-latte-base);
+    --color-panel: var(--ctp-latte-crust);
+    --color-secpan: var(--ctp-latte-mantle);
+    --color-overlay: var(--ctp-latte-overlay0);
+    --color-secover: var(--ctp-latte-overlay1);
 
-        --color-red: var(--ctp-latte-red);
-        --color-green: var(--ctp-latte-green);
-        --color-blue: var(--ctp-latte-blue);
-    }
+    /* text colors */
+    --color-body: var(--ctp-latte-text);
+    --color-headline: var(--ctp-latte-text);
+    --color-subhead: var(--ctp-latte-subtext0);
+    --color-subtle: var(--ctp-latte-overlay1);
+
+    /* colorful colors */
+    --color-blue: var(--ctp-latte-blue);
+    --color-green: var(--ctp-latte-green);
+    --color-yellow: var(--ctp-latte-yellow);
+    --color-red: var(--ctp-latte-red);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --text-color: var(--ctp-mocha-text);
-        --bg-color: var(--ctp-mocha-base);
-        --bg-color-sec: var(--ctp-mocha-mantle);
-        --bg-color-ter: var(--ctp-mocha-crust);
-        
-        --color-red: var(--ctp-mocha-red);
-        --color-green: var(--ctp-mocha-green);
+        /* background colors */
+        --color-bg: var(--ctp-mocha-base);
+        --color-panel: var(--ctp-mocha-crust);
+        --color-secpan: var(--ctp-mocha-mantle);
+        --color-overlay: var(--ctp-mocha-overlay0);
+        --color-secover: var(--ctp-mocha-overlay1);
+
+        /* text colors */
+        --color-body: var(--ctp-mocha-text);
+        --color-headline: var(--ctp-mocha-text);
+        --color-subhead: var(--ctp-mocha-subtext0);
+        --color-subtle: var(--ctp-mocha-overlay1);
+
+        /* colorful colors */
         --color-blue: var(--ctp-mocha-blue);
+        --color-green: var(--ctp-mocha-green);
+        --color-yellow: var(--ctp-mocha-yellow);
+        --color-red: var(--ctp-mocha-red);
     }
 }

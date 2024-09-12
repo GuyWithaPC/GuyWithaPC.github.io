@@ -1,48 +1,98 @@
+
 @import 'colors.css';
-@import 'fonts.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --font-text: "Inter", "Segoe UI", "Helvetica Neue", sans-serif;
+    --font-code: "Fira Code", monospace;
+}
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 0 10px;
+    color: var(--color-body);
+    background: var(--color-bg);
 }
 
-div.root {
-    padding-left: 8px;
-    padding-right: 8px;
+/* generic stuff */
+
+.centertext {
+    text-align: center;
 }
+
+/* heading stuff */
 
 h1, h2, h3 {
-    font-family: var(--header-font);
+    line-height: 1.2;
+    font-family: var(--font-text);
+    font-weight: 900;
 }
 
-/* code block styling */
-
-code {
-    background-color: var(--bg-color-ter);
-    font-family: var(--code-font);
-    border-radius: 10px;
-    padding: 10px;
+h1 {
+    font-size: xx-large;
 }
 
-code.edges {
-    border-radius: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
+h2 {
+    font-size: x-large;
+    color: var(--color-subhead);
 }
 
-code * {
-    font-family: var(--code-font);
+h3 {
+    font-size: large;
+    color: var(--color-subtle);
 }
 
-code a {
-    color: var(--color-red);
-    font-weight: bold;
+/* plain text styles */
+
+p {
+    font-family: var(--font-text);
+    color: var(--color-text);
+}
+
+/* navbar styles */
+
+#navbar {
+    display: flex;
+    position: sticky;
+    top: 10pt;
+    flex-direction: row;
+    background-color: var(--color-panel);
+    padding: 0;
+    border-radius: 30pt;
+    align-content: center;
+}
+
+#navbar a {
+    font-family: var(--font-text);
+    font-weight: 800;
+    background-color: transparent;
+    transition: background-color 0.25s;
+    padding: 10pt;
+    border-radius: inherit;
+    text-align: center;
+    flex-grow: 1;
+    color: var(--color-text);
     text-decoration: none;
 }
 
-code a.current {
-    text-decoration: var(--text-color) underline 2px;
+#navbar a:hover {
+    background-color: var(--color-secpan);
+}
+
+#navbar a.current {
+    background-color: var(--color-overlay);
+}
+
+#navbar a.current:hover {
+    background-color: var(--color-secover);
+}
+
+@media (max-width: 650px) {
+    #navbar {
+        flex-direction: column;
+        position: inherit;
+        margin-bottom: 10pt;
+    }
 }
