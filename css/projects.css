@@ -1,0 +1,9 @@
+@import "main.css";
+
+div.project {
+    background-color: var(--color-panel);
+    border-radius: 10pt;
+    padding: 10pt;
+    margin-top: 10pt;
+    margin-bottom: 10pt;
+}
