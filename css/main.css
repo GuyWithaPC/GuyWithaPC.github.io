@@ -72,7 +72,7 @@ h3 {
 
 /* plain text styles */
 
-p {
+p, li, text {
     font-family: var(--font-text);
     color: var(--color-text);
 }
